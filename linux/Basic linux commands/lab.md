@@ -27,15 +27,15 @@ Use the -p option to create both directories in one go .   sudo mkdir -p /home/b
 5. How many block devices of type disk are present in the system?
 
 # Linux Kernel Modules Boot and Filetypes
-1. What is the init process used by this system? 
-2. What is the default systemd target set in this system?
-3. Now, change the target to multi-user.target
-4. What type of file is firefox.deb located at /root?
-5. What type of file is sample_script.sh located at /root?
+1. What is the init process used by this system?  systemd 
+2. What is the default systemd target set in this system? graphical.target 
+3. Now, change the target to multi-user.target. sudo systemctl set-default multi-user.target
+4. What type of file is firefox.deb located at /root? Debian package file because of the .deb
+5. What type of file is sample_script.sh located at /root? shell script with the .sh extention
 6. You are asked to install a new third-party IDE (integrated development environment ) in the system.  
-Which directory is the recommended choice for the installation?
+Which directory is the recommended choice for the installation? the /opt
 7. Which directory contains the files related to the block devices that can be seen when running the lsblk command? disk, partitions and LVM
-8. What is the name of the vendor for the Ethernet Controller used in this system?
+8. What is the name of the vendor for the Ethernet Controller used in this system? Itel corporation
 
 # Package Management: DPKG and APT
 1. Which of the following package managers would you use on a debian based distro? apt
