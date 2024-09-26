@@ -44,9 +44,9 @@ Try to install it using sudo dpkg -i.   wget https://download.mozilla.org/?produ
 3. Was the installation successful ? no
 4. Why did it fail?   because of an error message , dpkg cannot access archive 'firefox-latest.deb'
 5. Let's use apt to install it firefox. sudo apt install firefox
-6. Lets now locate the package to install Chromium browser in the system.  
-Use apt search functionality to locate the correct package name.
+6. Lets now locate the package to install Chromium browser in the system. apt search chromium 
+Use apt search functionality to locate the correct package name. 
 The browser has the description of: Chromium web browser, open-source version of Chrome  
-What is the correct package name?
-7. Finally, remove the firefox browser from the system. sudo apt autoremove firefox
+What is the correct package name? "chromium"
+7. Finally, remove the firefox browser from the system. sudo apt autoremove firefox. sudo apt autoremouve firefox
 
