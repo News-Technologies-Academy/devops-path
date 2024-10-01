@@ -63,6 +63,7 @@ Make use of the redirect operator.
 
 # DNS
 1. What is the IP address of the DNS Server used in this system?
+Answer: cat /ect/resolv.conf
 2. Which file is responsible for host file-based DNS resolution?
 3. What is the configuration file used for the DNS Server?
 4. Change the DNS Server to google's DNS which is 8.8.8.8
