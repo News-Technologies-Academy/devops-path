@@ -1,23 +1,25 @@
 from flask import Flask, make_response, request, jsonify, after_this_request, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 from parameters import master_username, db_password, endpoint, db_instance_name
-import requests, json
+import requests, json, os
+import sqlite3
+import gunicorn
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+mysqlconnector://{master_username}:{db_password}@{endpoint}/{db_instance_name}'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
 class TodoTable(db.Model):
     __tablename__ = "todotable"
- 
+
     id = db.Column(db.Integer, primary_key=True)
     task = db.Column(db.String(100))
- 
+
     def __init__(self, task):
         self.task = task
- 
+
     def __repr__(self):
         return f"{self.id}:{self.task}"
 
